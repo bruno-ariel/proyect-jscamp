@@ -1,7 +1,18 @@
 name: 02 - Manual
 
 on:
-    workflow_dispatch:
+  workflow_dispatch:
+    inputs:
+      log_level:
+        description: "Nivel de log"
+        required: true
+        default: "info"
+        type: choice
+        options:
+          - info
+          - debug
+          - warn
+          - error
 
 jobs:
   hello:
@@ -15,4 +26,4 @@ jobs:
         run: date
 
       - name: Ver archivos disponibles
-        run: ls -la 
+        run: ls -la
