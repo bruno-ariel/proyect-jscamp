@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Saludar
-        run: echo "Hola desde GitHub Actions!"
+        run: echo "Hola desde GitHub Actions !"
 
       - name: Ver fecha del runner
         run: date
